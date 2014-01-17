@@ -1,0 +1,5 @@
+completion	liftweb.txt	/*completion*
+liftweb	liftweb.txt	/*liftweb*
+liftweb-usage	liftweb.txt	/*liftweb-usage*
+liftweb.vim	liftweb.txt	/*liftweb.vim*
+scala-liftweb	liftweb.txt	/*scala-liftweb*
