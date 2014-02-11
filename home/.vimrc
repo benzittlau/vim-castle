@@ -4,8 +4,14 @@ let mapleader = " "
 "necessary on some Linux distros for pathogen to properly load bundles
 filetype off
 
+"Vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'wakatime/vim-wakatime'
 
-
+"Search config
+set ignorecase
+set smartcase
 
 "load pathogen managed plugins
 call pathogen#runtime_append_all_bundles()
@@ -20,9 +26,6 @@ set backspace=indent,eol,start
 
 "automatically load the file if it had changed outside of vim
 set autoread
-
-"fix pasting directly from the clipboard
-set paste
 
 "store lots of :cmdline history
 set history=1000
@@ -203,6 +206,8 @@ function! s:SetTabWidth(width)
     IndentGuidesEnable
 endfunction
 
+
+
 "folding settings
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
@@ -250,6 +255,11 @@ let g:ctrlp_match_window_reversed = 0
 " PeepOpen uses <Leader>p as well so you will need to redefine it so something
 " else in your ~/.vimrc file, such as:
 " nmap <silent> <Leader>q <Plug>PeepOpen
+
+command! TriggerSaveAndRun call rerun#TriggerSaveAndRun()
+silent! nmap <silent> <Leader>r :TriggerSaveAndRun<CR>
+
+silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 silent! nmap <silent> <Leader>l :TlistToggle<CR>
