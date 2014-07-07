@@ -250,6 +250,7 @@ set hidden
 "ctrlp configuration
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_switch_buffer = 1
 
 
 " PeepOpen uses <Leader>p as well so you will need to redefine it so something
