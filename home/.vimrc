@@ -284,6 +284,10 @@ let g:syntastic_enable_signs=1
 "automatically close the location list when all errors are fixed
 let g:syntastic_auto_loc_list=2
 
+"should display hound complaints inline on save
+"let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
+"let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+
 "key mapping for vimgrep result navigation
 map <A-o> :copen<CR>
 map <A-q> :cclose<CR>
