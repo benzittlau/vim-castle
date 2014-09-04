@@ -260,10 +260,17 @@ let g:ctrlp_switch_buffer = 1
 command! TriggerSaveAndRun call rerun#TriggerSaveAndRun()
 silent! nmap <silent> <Leader>r :TriggerSaveAndRun<CR>
 
+command! ZeusTestLine call zeus#TestCurrentLine()
+silent! nmap <silent> <Leader>z :ZeusTestLine <CR>
+
+command! RunLastCommand call zeus#RunLastCommand()
+silent! nmap <silent> <Leader>l :RunLastCommand<CR>
+
+silent! nmap <silent> <Leader>z :ZeusTestLine <CR>
+
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
-silent! nmap <silent> <Leader>l :TlistToggle<CR>
 silent! nnoremap <leader>t :CtrlP<CR>
 " nnoremap <silent> <C-f> :call FindInNERDTree()<CR>
 
@@ -377,11 +384,19 @@ let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
   "    colorscheme default
   "endif
 "endif
+"
+"
+
+
 
 colorscheme railscasts
 function! SyntaxItem()
   return synIDattr(synID(line("."),col("."),1),"name")
 endfunction
+
+" Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+$/
 
 set statusline+=%{SyntaxItem()}
 
