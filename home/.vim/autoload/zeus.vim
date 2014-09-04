@@ -19,3 +19,11 @@ function! zeus#RunLastCommand()
   write
   call VimuxRunLastCommand()
 endfunction
+
+function! zeus#TestFullFile()
+  let file = @%
+  let test_string = "zeus test " . file
+  echom test_string
+  write
+  call VimuxRunCommand(test_string)
+endfunction

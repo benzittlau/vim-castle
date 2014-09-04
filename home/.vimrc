@@ -266,6 +266,9 @@ silent! nmap <silent> <Leader>z :ZeusTestLine <CR>
 command! RunLastCommand call zeus#RunLastCommand()
 silent! nmap <silent> <Leader>l :RunLastCommand<CR>
 
+command! TestFullFile call zeus#TestFullFile()
+silent! nmap <silent> <Leader>f :TestFullFile<CR>
+
 silent! nmap <silent> <Leader>z :ZeusTestLine <CR>
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
