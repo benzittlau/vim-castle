@@ -3,6 +3,7 @@ function! zeus#TestCurrentLine()
   let regex = '_spec\.rb$'
   let file = @%
   let check = matchstr(file, regex)
+  wall " Write all
   if empty(check)
     " No Match
     call VimuxRunLastCommand()
@@ -10,13 +11,12 @@ function! zeus#TestCurrentLine()
     " Match
     let test_string = "zeus test " . file . ":" . line(".")
     echom test_string
-    write
     call VimuxRunCommand(test_string)
   endif
 endfunction
 
 function! zeus#RunLastCommand()
-  write
+  wall " Write all
   call VimuxRunLastCommand()
 endfunction
 
@@ -24,6 +24,6 @@ function! zeus#TestFullFile()
   let file = @%
   let test_string = "zeus test " . file
   echom test_string
-  write
+  wall " Write all
   call VimuxRunCommand(test_string)
 endfunction

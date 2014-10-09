@@ -7,7 +7,6 @@ filetype off
 "Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-Bundle 'wakatime/vim-wakatime'
 
 "Search config
 set ignorecase
