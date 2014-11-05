@@ -250,33 +250,31 @@ set hidden
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_switch_buffer = 1
+let g:ctrlp_max_files=0
 
 
 " PeepOpen uses <Leader>p as well so you will need to redefine it so something
 " else in your ~/.vimrc file, such as:
 " nmap <silent> <Leader>q <Plug>PeepOpen
+command! YankCurrentFileAndLine call file_yank#GetCurrentFileAndLine()
+silent! nmap <silent> <Leader>y :YankCurrentFileAndLine<CR>
 
-command! TriggerSaveAndRun call rerun#TriggerSaveAndRun()
-silent! nmap <silent> <Leader>r :TriggerSaveAndRun<CR>
+command! VimuxTestLine call vimux#TestCurrentLine()
+silent! nmap <silent> <Leader>z :VimuxTestLine <CR>
 
-command! ZeusTestLine call zeus#TestCurrentLine()
-silent! nmap <silent> <Leader>z :ZeusTestLine <CR>
-
-command! RunLastCommand call zeus#RunLastCommand()
+command! RunLastCommand call vimux#RunLastCommand()
 silent! nmap <silent> <Leader>l :RunLastCommand<CR>
 
-command! TestFullFile call zeus#TestFullFile()
+command! TestFullFile call vimux#TestFullFile()
 silent! nmap <silent> <Leader>f :TestFullFile<CR>
 
-silent! nmap <silent> <Leader>z :ZeusTestLine <CR>
-
-silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
+silent! nmap <silent> <Leader>z :vimuxTestLine <CR>
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 silent! nnoremap <leader>t :CtrlP<CR>
 " nnoremap <silent> <C-f> :call FindInNERDTree()<CR>
 
-"make <c-p> clear the highlight 
+"make <c-p> clear the highlight
 nnoremap <C-P> :nohls<CR>
 
 "map to bufexplorer
