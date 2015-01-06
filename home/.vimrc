@@ -268,7 +268,8 @@ silent! nmap <silent> <Leader>l :RunLastCommand<CR>
 command! TestFullFile call vimux#TestFullFile()
 silent! nmap <silent> <Leader>f :TestFullFile<CR>
 
-silent! nmap <silent> <Leader>z :vimuxTestLine <CR>
+command! RubocopCurrentFile call vimux#RubocopCurrentFile()
+silent! nmap <silent> <Leader>r :RubocopCurrentFile<CR>
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 silent! nnoremap <leader>t :CtrlP<CR>
@@ -396,9 +397,12 @@ endfunction
 
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
-match ExtraWhitespace /\s\+$/
+autocmd Syntax * syn match ExtraWhitespace /\s\+$/ containedin=ALL
 
 set statusline+=%{SyntaxItem()}
 
 " Store swap files in fixed location, not current directory.
 set dir=~/.vimswap//,/var/tmp//,/tmp//,.
+
+" Scroll before hitting bottom
+set scrolloff=8
