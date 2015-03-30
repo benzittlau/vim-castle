@@ -215,6 +215,8 @@ set nofoldenable        "dont fold by default
 set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 "display tabs and trailing spaces
 "set list
@@ -251,6 +253,10 @@ let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_switch_buffer = 1
 let g:ctrlp_max_files=0
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  'node_modules'
+  \ }
 
 
 " PeepOpen uses <Leader>p as well so you will need to redefine it so something
