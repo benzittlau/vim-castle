@@ -412,3 +412,12 @@ set dir=~/.vimswap//,/var/tmp//,/tmp//,.
 
 " Scroll before hitting bottom
 set scrolloff=8
+
+
+" Tabular configuration
+nmap <Leader>k= :Tabularize /=<CR>
+vmap <Leader>k= :Tabularize /=<CR>
+nmap <Leader>k> :Tabularize /=><CR>
+vmap <Leader>k> :Tabularize /=><CR>
+nmap <Leader>k: :Tabularize /:<CR>
+vmap <Leader>k: :Tabularize /:<CR>
