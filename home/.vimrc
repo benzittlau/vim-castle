@@ -281,6 +281,9 @@ silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 silent! nnoremap <leader>t :CtrlP<CR>
 " nnoremap <silent> <C-f> :call FindInNERDTree()<CR>
 
+" Bind nerd tree find to leader n
+silent! nmap <silent> <Leader>n :NERDTreeFind<CR>
+
 "make <c-p> clear the highlight
 nnoremap <C-P> :nohls<CR>
 
@@ -394,6 +397,8 @@ let ScreenShot = {'Icon':0, 'Credits':0, 'force_background':'#FFFFFF'}
 "
 "
 
+" Place a space between the comment delimeter and the content
+let NERDSpaceDelims=1
 
 
 colorscheme railscasts
@@ -413,6 +418,8 @@ set dir=~/.vimswap//,/var/tmp//,/tmp//,.
 " Scroll before hitting bottom
 set scrolloff=8
 
+" Prevent collection between supertab and endwiset
+let g:SuperTabCrMapping = 0
 
 " Tabular configuration
 nmap <Leader>k= :Tabularize /=<CR>

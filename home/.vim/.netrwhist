@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/bzittlau/Documents/code/sandbox/clean-rails/blog'
 let g:netrw_dirhist_2='/Users/bzittlau/Documents/code/sandbox/clean-rails/blog/lib'
 let g:netrw_dirhist_3='/Users/bzittlau/Documents/code/sandbox/clean-rails/blog/lib/assets'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/Users/bzittlau/Documents/code/sandbox/clean-rails/blog/l
 let g:netrw_dirhist_5='/Users/bzittlau/Documents/code/sandbox/clean-rails/blog'
 let g:netrw_dirhist_6='/Users/bzittlau/Dropbox/Writing'
 let g:netrw_dirhist_7='/Users/bzittlau/Documents/code/jobber/Jobber/spec/models/ab_testing'
+let g:netrw_dirhist_8='/Users/bzittlau/Documents/code/jobber/Jobber/app/presenters/api'
